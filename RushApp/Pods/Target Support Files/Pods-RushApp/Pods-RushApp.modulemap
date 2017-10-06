@@ -1,0 +1,6 @@
+framework module Pods_RushApp {
+  umbrella header "Pods-RushApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
