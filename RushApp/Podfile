@@ -8,6 +8,7 @@ target 'RushApp' do
   # Pods for RushApp
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'Firebase'
 
   target 'RushAppTests' do
     inherit! :search_paths
