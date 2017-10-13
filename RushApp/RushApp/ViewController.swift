@@ -14,11 +14,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("view did load\n\n\n\n")
         // Do any additional setup after loading the view, typically from a nib.
-        if FBSDKAccessToken.current != nil {
+        if FBSDKAccessToken.current() != nil {
             // User is logged in, do work such as go to next view controller.
+            print("logged in")
+            print(FBSDKAccessToken.current())
         } else {
-            //let loginButton = FBSDKLoginButton()
+            print("should enter")
+            let loginButton = FBSDKLoginButton()
+            
+            // Optional: Place the button in the center of your view.
+            loginButton.center = view.center
+            loginButton.readPermissions = ["public_profile"]
+            view.addSubview(loginButton as? UIView ?? UIView())
             
         }
     }
