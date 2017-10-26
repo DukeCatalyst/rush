@@ -6,9 +6,10 @@ target 'RushApp' do
   use_frameworks!
 
   # Pods for RushApp
-  pod 'FBSDKCoreKit'
-  pod 'FBSDKLoginKit'
   pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'GoogleSignIn'
 
   target 'RushAppTests' do
     inherit! :search_paths
