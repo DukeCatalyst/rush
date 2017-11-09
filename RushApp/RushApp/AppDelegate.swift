@@ -10,18 +10,23 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     var window: UIWindow?
 
+    var ref: DatabaseReference!
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        ref = Database.database().reference()
         
+        GIDSignIn.sharedInstance().signOut()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
@@ -37,7 +42,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
         if let error = error { return }
-    
+        
+        let loginUserId = user.userID
+        let loginGivenName = user.profile.givenName
+        let loginFamilyName = user.profile.familyName
+        let loginEmail = user.profile.email
+        
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                    accessToken: authentication.accessToken)
@@ -49,7 +59,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 return
             }
             // User is signed in
-            // ...
+            
+            self.ref.child("allUsers").child("GID").child(loginUserId!).observe(DataEventType.value, with: { (snapshot) in
+                if snapshot.exists() {
+                    // firebase.google.com/docs/database/ios/read-and-write
+                    print("user found")
+                    let value = snapshot.value as? [String: AnyObject]
+                    CurrentSessionData.CurrentUser = User(dict: value!)
+                    
+                    // used to print JSON data
+                    dump(CurrentSessionData.CurrentUser)
+                } else {
+                    // firebase.google.com/docs/database/ios/read-and-write
+                    print("user not found")
+                    let trialUser = User(userID: loginUserId!, firstName: "Brian", lastName: "Li", school: "Duke")
+                    CurrentSessionData.CurrentUser = trialUser
+                    self.ref.child("allUsers").child("GID").child(loginUserId!).setValue(CurrentSessionData.CurrentUser.toDictionary())
+                }
+                
+            })
+            
         }
     }
 

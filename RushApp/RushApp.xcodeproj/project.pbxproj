@@ -10,13 +10,15 @@
 		2FB0C2E9843F4DF9E6DAD3D3 /* Pods_RushAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CA1C5D2B3FED458FF80C1D /* Pods_RushAppUITests.framework */; };
 		643E85A3B470D9E4022C8FAC /* Pods_RushApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9E46BAA35D6EFC3D0900A1 /* Pods_RushApp.framework */; };
 		C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E51F882D28007D7989 /* AppDelegate.swift */; };
-		C72303E81F882D28007D7989 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E71F882D28007D7989 /* ViewController.swift */; };
+		C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E71F882D28007D7989 /* SignInViewController.swift */; };
 		C72303EB1F882D28007D7989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72303E91F882D28007D7989 /* Main.storyboard */; };
 		C72303EE1F882D28007D7989 /* RushApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C72303EC1F882D28007D7989 /* RushApp.xcdatamodeld */; };
 		C72303F01F882D28007D7989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72303EF1F882D28007D7989 /* Assets.xcassets */; };
 		C72303F31F882D28007D7989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72303F11F882D28007D7989 /* LaunchScreen.storyboard */; };
 		C72303FE1F882D28007D7989 /* RushAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303FD1F882D28007D7989 /* RushAppTests.swift */; };
 		C72304091F882D28007D7989 /* RushAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72304081F882D28007D7989 /* RushAppUITests.swift */; };
+		C72F2F731FB3BE5D00CAC47E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F2F721FB3BE5D00CAC47E /* User.swift */; };
+		C72F2F751FB3D4E000CAC47E /* CurrentSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */; };
 		C7AFE7C61FA29F9E006663A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7AFE7C51FA29F9E006663A7 /* GoogleService-Info.plist */; };
 		EAB515B8D0CBB101F5AA3F05 /* Pods_RushAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F36E91897D4E95FB9E8092C /* Pods_RushAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +49,7 @@
 		A595ECFFCD877AAF0F2EE87E /* Pods-RushAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppUITests/Pods-RushAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C72303E21F882D28007D7989 /* RushApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72303E51F882D28007D7989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C72303E71F882D28007D7989 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C72303E71F882D28007D7989 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C72303EA1F882D28007D7989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C72303ED1F882D28007D7989 /* RushApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RushApp.xcdatamodel; sourceTree = "<group>"; };
 		C72303EF1F882D28007D7989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		C72304041F882D28007D7989 /* RushAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RushAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72304081F882D28007D7989 /* RushAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RushAppUITests.swift; sourceTree = "<group>"; };
 		C723040A1F882D28007D7989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C72F2F721FB3BE5D00CAC47E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSessionData.swift; sourceTree = "<group>"; };
 		C7AFE7C51FA29F9E006663A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8CA1C5D2B3FED458FF80C1D /* Pods_RushAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RushAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD85758A3CCE1EA9D73B16E1 /* Pods-RushAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppTests/Pods-RushAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,13 +136,15 @@
 			isa = PBXGroup;
 			children = (
 				C72303E51F882D28007D7989 /* AppDelegate.swift */,
-				C72303E71F882D28007D7989 /* ViewController.swift */,
+				C72303E71F882D28007D7989 /* SignInViewController.swift */,
+				C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */,
 				C72303E91F882D28007D7989 /* Main.storyboard */,
 				C72303EF1F882D28007D7989 /* Assets.xcassets */,
 				C72303F11F882D28007D7989 /* LaunchScreen.storyboard */,
 				C72303F41F882D28007D7989 /* Info.plist */,
 				C7AFE7C51FA29F9E006663A7 /* GoogleService-Info.plist */,
 				C72303EC1F882D28007D7989 /* RushApp.xcdatamodeld */,
+				C72F2F721FB3BE5D00CAC47E /* User.swift */,
 			);
 			path = RushApp;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -427,6 +434,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,8 +482,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72303E81F882D28007D7989 /* ViewController.swift in Sources */,
+				C72F2F731FB3BE5D00CAC47E /* User.swift in Sources */,
+				C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */,
 				C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */,
+				C72F2F751FB3D4E000CAC47E /* CurrentSessionData.swift in Sources */,
 				C72303EE1F882D28007D7989 /* RushApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
