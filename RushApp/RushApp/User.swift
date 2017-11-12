@@ -13,7 +13,7 @@ class User: NSObject {
     var firstName: String
     var lastName: String
     var school: String
-    var groups: [String]!
+    var memberGroups: [String]!
     var rushGroups: [String]!
     
     override init() {
@@ -21,6 +21,7 @@ class User: NSObject {
         firstName = ""
         lastName = ""
         school = ""
+        
     }
     
     init(userID: String, firstName: String, lastName: String, school: String) {
@@ -28,6 +29,9 @@ class User: NSObject {
         self.firstName = firstName
         self.lastName = lastName
         self.school = school
+        print("values made!")
+        self.memberGroups = "Catalyst,ThetaRhoPhi".components(separatedBy: ",")
+        self.rushGroups = "Catalyst,Frat,SigmaKappaLambda".components(separatedBy: ",")
     }
     
     init(dict: [String: AnyObject]) {
@@ -35,6 +39,8 @@ class User: NSObject {
         self.firstName = dict["firstName"] as! String
         self.lastName = dict["lastName"] as! String
         self.school = dict["school"] as! String
+        self.memberGroups = "Catalyst,ThetaRhoPhi".components(separatedBy: ",")
+        self.rushGroups = "Catalyst,Frat,SigmaKappaLambda".components(separatedBy: ",")
     }
     
     func toDictionary() -> [String: AnyObject] {

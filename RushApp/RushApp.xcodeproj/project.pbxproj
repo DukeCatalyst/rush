@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2FB0C2E9843F4DF9E6DAD3D3 /* Pods_RushAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CA1C5D2B3FED458FF80C1D /* Pods_RushAppUITests.framework */; };
 		643E85A3B470D9E4022C8FAC /* Pods_RushApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9E46BAA35D6EFC3D0900A1 /* Pods_RushApp.framework */; };
+		B1BFAC311FB805E2003B542D /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BFAC301FB805E2003B542D /* GroupsViewController.swift */; };
 		C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E51F882D28007D7989 /* AppDelegate.swift */; };
 		C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E71F882D28007D7989 /* SignInViewController.swift */; };
 		C72303EB1F882D28007D7989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72303E91F882D28007D7989 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		5F36E91897D4E95FB9E8092C /* Pods_RushAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RushAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68922F70EBCB82D9F60CD307 /* Pods-RushAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppTests/Pods-RushAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A595ECFFCD877AAF0F2EE87E /* Pods-RushAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppUITests/Pods-RushAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1BFAC301FB805E2003B542D /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupsViewController.swift; path = /Users/simran/GitHub/rush/RushApp/RushApp/GroupsViewController.swift; sourceTree = "<absolute>"; };
 		C72303E21F882D28007D7989 /* RushApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72303E51F882D28007D7989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72303E71F882D28007D7989 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		C72303E41F882D28007D7989 /* RushApp */ = {
 			isa = PBXGroup;
 			children = (
+				B1BFAC301FB805E2003B542D /* GroupsViewController.swift */,
 				C72303E51F882D28007D7989 /* AppDelegate.swift */,
 				C72303E71F882D28007D7989 /* SignInViewController.swift */,
 				C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */,
@@ -254,6 +257,7 @@
 				TargetAttributes = {
 					C72303E11F882D28007D7989 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					C72303F81F882D28007D7989 = {
@@ -484,6 +488,7 @@
 			files = (
 				C72F2F731FB3BE5D00CAC47E /* User.swift in Sources */,
 				C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */,
+				B1BFAC311FB805E2003B542D /* GroupsViewController.swift in Sources */,
 				C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */,
 				C72F2F751FB3D4E000CAC47E /* CurrentSessionData.swift in Sources */,
 				C72303EE1F882D28007D7989 /* RushApp.xcdatamodeld in Sources */,
@@ -653,11 +658,13 @@
 			baseConfigurationReference = 0BF6236291D417E1B49A00C6 /* Pods-RushApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RushApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = rush.RushApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -668,6 +675,7 @@
 			baseConfigurationReference = 04BFF85812FD41930E4E1190 /* Pods-RushApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RushApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
