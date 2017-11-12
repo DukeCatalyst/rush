@@ -10,6 +10,7 @@
 		2FB0C2E9843F4DF9E6DAD3D3 /* Pods_RushAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CA1C5D2B3FED458FF80C1D /* Pods_RushAppUITests.framework */; };
 		643E85A3B470D9E4022C8FAC /* Pods_RushApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9E46BAA35D6EFC3D0900A1 /* Pods_RushApp.framework */; };
 		B1BFAC311FB805E2003B542D /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BFAC301FB805E2003B542D /* GroupsViewController.swift */; };
+		B1BFAC331FB8C50F003B542D /* MembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BFAC321FB8C50F003B542D /* MembersTableViewController.swift */; };
 		C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E51F882D28007D7989 /* AppDelegate.swift */; };
 		C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E71F882D28007D7989 /* SignInViewController.swift */; };
 		C72303EB1F882D28007D7989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72303E91F882D28007D7989 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		68922F70EBCB82D9F60CD307 /* Pods-RushAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppTests/Pods-RushAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A595ECFFCD877AAF0F2EE87E /* Pods-RushAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppUITests/Pods-RushAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1BFAC301FB805E2003B542D /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupsViewController.swift; path = /Users/simran/GitHub/rush/RushApp/RushApp/GroupsViewController.swift; sourceTree = "<absolute>"; };
+		B1BFAC321FB8C50F003B542D /* MembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
 		C72303E21F882D28007D7989 /* RushApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72303E51F882D28007D7989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72303E71F882D28007D7989 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -137,16 +139,17 @@
 		C72303E41F882D28007D7989 /* RushApp */ = {
 			isa = PBXGroup;
 			children = (
-				B1BFAC301FB805E2003B542D /* GroupsViewController.swift */,
 				C72303E51F882D28007D7989 /* AppDelegate.swift */,
 				C72303E71F882D28007D7989 /* SignInViewController.swift */,
-				C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */,
+				B1BFAC301FB805E2003B542D /* GroupsViewController.swift */,
+				B1BFAC321FB8C50F003B542D /* MembersTableViewController.swift */,
 				C72303E91F882D28007D7989 /* Main.storyboard */,
 				C72303EF1F882D28007D7989 /* Assets.xcassets */,
 				C72303F11F882D28007D7989 /* LaunchScreen.storyboard */,
 				C72303F41F882D28007D7989 /* Info.plist */,
 				C7AFE7C51FA29F9E006663A7 /* GoogleService-Info.plist */,
 				C72303EC1F882D28007D7989 /* RushApp.xcdatamodeld */,
+				C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */,
 				C72F2F721FB3BE5D00CAC47E /* User.swift */,
 			);
 			path = RushApp;
@@ -489,6 +492,7 @@
 				C72F2F731FB3BE5D00CAC47E /* User.swift in Sources */,
 				C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */,
 				B1BFAC311FB805E2003B542D /* GroupsViewController.swift in Sources */,
+				B1BFAC331FB8C50F003B542D /* MembersTableViewController.swift in Sources */,
 				C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */,
 				C72F2F751FB3D4E000CAC47E /* CurrentSessionData.swift in Sources */,
 				C72303EE1F882D28007D7989 /* RushApp.xcdatamodeld in Sources */,
