@@ -27,36 +27,52 @@ class GroupsViewController: UIViewController {
         print(CurrentSessionData.GroupMembers)
         
         var button : UIButton
-        let width :CGFloat = 100.0
-        let height :CGFloat = 50.0
-        let x :CGFloat = view.center.x-width/2
-        var y :CGFloat = 0.0
         let rushGroups = CurrentSessionData.CurrentUser.rushGroups!
         let memberGroups = CurrentSessionData.CurrentUser.memberGroups!
+        let width :CGFloat = 350
+        let height :CGFloat = 50
+        let x :CGFloat = view.center.x-width/2
+        var y :CGFloat = view.center.y-height*CGFloat(rushGroups.count+memberGroups.count)
+        var label = UILabel(frame: CGRect(x: x, y: y, width: width, height: height))
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = "Rush Groups:"
+        self.view.addSubview(label)
+        y += height + 20
         for group in rushGroups {
             button = UIButton(type: UIButtonType.system) as UIButton
             button.frame = CGRect(x: x, y: y, width: width, height: height)
-            button.backgroundColor = UIColor.green
+            button.backgroundColor = UIColor(red: 23/255.0, green: 30/255.0, blue: 111/255.0, alpha: 0.6)
+            button.layer.borderWidth = 0.8
+            button.layer.borderColor = UIColor.lightGray.cgColor
             button.setTitle(group, for: UIControlState.normal)
             button.addTarget(self, action:#selector(self.buttonAction), for: .touchUpInside)
             self.view.addSubview(button)
-            y = y + 50
+            y += height + 20
         }
+        label = UILabel(frame: CGRect(x: x, y: y, width: width, height: height))
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = "Member Groups:"
+        self.view.addSubview(label)
+        y += height + 20
         for group in memberGroups {
             button = UIButton(type: UIButtonType.system) as UIButton
-            // x, y, width, height
             button.frame = CGRect(x: x, y: y, width: width, height: height)
-            button.backgroundColor = UIColor.green
+            button.backgroundColor = UIColor(red: 23/255.0, green: 30/255.0, blue: 111/255.0, alpha: 0.2)
+            button.layer.borderWidth = 0.8
+            button.layer.borderColor = UIColor.lightGray.cgColor
             button.setTitle(group, for: UIControlState.normal)
             button.addTarget(self, action:#selector(self.buttonAction), for: .touchUpInside)
             self.view.addSubview(button)
-            y = y + 50
+            y += height + 20
         }
     }
     
     @objc func buttonAction(sender:UIButton!)
     {
-        print(sender.titleLabel!.text!)
+        CurrentSessionData.CurrentGroup = sender.titleLabel!.text!
+        performSegue(withIdentifier: "selected-group", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
