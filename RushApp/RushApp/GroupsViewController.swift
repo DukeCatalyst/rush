@@ -11,9 +11,21 @@ class GroupsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        Fake data for now
         let trialUser = User(userID: "test", firstName: "Brian", lastName: "Li", school: "Duke")
+        CurrentSessionData.GroupMembers.append(trialUser)
         CurrentSessionData.CurrentUser = trialUser
-        print(CurrentSessionData.CurrentUser)
+        
+        var moreFakeUsers = User(userID: "test", firstName: "Brian", lastName: "Jordan", school: "Duke")
+        CurrentSessionData.GroupMembers.append(moreFakeUsers)
+        moreFakeUsers = User(userID: "test", firstName: "Simran", lastName: "Singh", school: "Duke")
+        CurrentSessionData.GroupMembers.append(moreFakeUsers)
+        moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke")
+        CurrentSessionData.GroupMembers.append(moreFakeUsers)
+        
+        print(CurrentSessionData.GroupMembers)
+        
         var button : UIButton
         let width :CGFloat = 100.0
         let height :CGFloat = 50.0
@@ -26,7 +38,7 @@ class GroupsViewController: UIViewController {
             button.frame = CGRect(x: x, y: y, width: width, height: height)
             button.backgroundColor = UIColor.green
             button.setTitle(group, for: UIControlState.normal)
-            button.addTarget(self, action: Selector(("buttonAction:")), for: UIControlEvents.touchUpInside)
+            button.addTarget(self, action:#selector(self.buttonAction), for: .touchUpInside)
             self.view.addSubview(button)
             y = y + 50
         }
@@ -36,15 +48,15 @@ class GroupsViewController: UIViewController {
             button.frame = CGRect(x: x, y: y, width: width, height: height)
             button.backgroundColor = UIColor.green
             button.setTitle(group, for: UIControlState.normal)
-            button.addTarget(self, action: Selector(("buttonAction:")), for: UIControlEvents.touchUpInside)
+            button.addTarget(self, action:#selector(self.buttonAction), for: .touchUpInside)
             self.view.addSubview(button)
             y = y + 50
         }
     }
     
-    func buttonAction()
+    @objc func buttonAction(sender:UIButton!)
     {
-        print("Well, that worked!")
+        print(sender.titleLabel!.text!)
     }
 
     override func didReceiveMemoryWarning() {
