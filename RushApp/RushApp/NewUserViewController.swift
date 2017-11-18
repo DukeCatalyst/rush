@@ -10,7 +10,8 @@ import UIKit
 
 class NewUserViewController: UIViewController {
 
-    let requiredFields = ["School", "First Name", "Last Name"]
+    let requiredFields = ["User ID", "First Name", "Last Name", "School", "Groups (Member)", "Groups (Rushing)"]
+    let dataUpdating = ["userID", "firstName", "lastName", "school", "memberGroups", "rushGroups"]
     var index = 0
     
     @IBOutlet weak var fieldLabel: UILabel!
@@ -18,6 +19,7 @@ class NewUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateDisplay()
 
         // Do any additional setup after loading the view.
     }
@@ -27,14 +29,18 @@ class NewUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateDisplay(labelText: String) {
-        fieldLabel.text = labelText
+    func updateDisplay() {
+        fieldLabel.text = requiredFields[index]
         textField = nil
     }
     
     @IBAction func nextClicked(_ sender: Any) {
-        if(textField.text != nil) {
+        if let currentText = textField.text, !currentText.isEmpty {
+            let updatingDataType = dataUpdating[index]
+            CurrentUserData.CurrentUser.setValue(textField.text!, forKey: updatingDataType)
             
+            index += 1
+            updateDisplay()
         } else {
             
         }
