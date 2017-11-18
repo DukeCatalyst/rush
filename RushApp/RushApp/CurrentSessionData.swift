@@ -10,4 +10,5 @@ struct CurrentSessionData {
     static var CurrentUser: User = User()
     static var GroupMembers: [User] = [User]()
     static var CurrentGroup: String = String()
+    static var SelectedMember: User = User()
 }

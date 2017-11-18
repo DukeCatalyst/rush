@@ -29,7 +29,6 @@ class User: NSObject {
         self.firstName = firstName
         self.lastName = lastName
         self.school = school
-        print("values made!")
         self.memberGroups = "Catalyst,ThetaRhoPhi".components(separatedBy: ",")
         self.rushGroups = "Catalyst,Frat,SigmaKappaLambda".components(separatedBy: ",")
     }
