@@ -10,11 +10,10 @@ import UIKit
 
 class MembersTableViewController: UITableViewController {
 
-    var users: [String] = [String]()
+    var users: [User] = CurrentGroupData.GroupMembers
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        users = ["Simran", "Brian", "Brian", "Nikki"]
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,13 +21,14 @@ class MembersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = users[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MembersTableViewCell
+        cell.UserName.text = "Test"
+        cell.UserStatus.text = "Test"
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
         CurrentGroupData.SelectedMember = CurrentGroupData.GroupMembers[indexPath.row]
+        performSegue(withIdentifier: "selected-member", sender: self)
     }
 }
