@@ -22,8 +22,9 @@ class MembersTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MembersTableViewCell
-        cell.UserName.text = "Test"
-        cell.UserStatus.text = "Test"
+        cell.UserName.text = users[indexPath.row].firstName
+        cell.UserStatus.text = "member"
+        cell.UserImage.image = UIImage(named: "test.jpg")
         return cell
     }
     
