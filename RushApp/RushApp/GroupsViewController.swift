@@ -14,21 +14,21 @@ class GroupsViewController: UIViewController {
         
 //        Fake data for now
         let trialUser = User(userID: "test", firstName: "Brian", lastName: "Li", school: "Duke")
-        CurrentSessionData.GroupMembers.append(trialUser)
-        CurrentSessionData.CurrentUser = trialUser
+        CurrentUserData.CurrentUser = trialUser
+        CurrentGroupData.GroupMembers.append(trialUser)
         
         var moreFakeUsers = User(userID: "test", firstName: "Brian", lastName: "Jordan", school: "Duke")
-        CurrentSessionData.GroupMembers.append(moreFakeUsers)
+        CurrentGroupData.GroupMembers.append(moreFakeUsers)
         moreFakeUsers = User(userID: "test", firstName: "Simran", lastName: "Singh", school: "Duke")
-        CurrentSessionData.GroupMembers.append(moreFakeUsers)
+        CurrentGroupData.GroupMembers.append(moreFakeUsers)
         moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke")
-        CurrentSessionData.GroupMembers.append(moreFakeUsers)
+        CurrentGroupData.GroupMembers.append(moreFakeUsers)
         
-        print(CurrentSessionData.GroupMembers)
+        print(CurrentGroupData.GroupMembers)
         
         var button : UIButton
-        let rushGroups = CurrentSessionData.CurrentUser.rushGroups!
-        let memberGroups = CurrentSessionData.CurrentUser.memberGroups!
+        let rushGroups = CurrentUserData.CurrentUser.rushGroups!
+        let memberGroups = CurrentUserData.CurrentUser.memberGroups!
         let width :CGFloat = 350
         let height :CGFloat = 50
         let x :CGFloat = view.center.x-width/2
@@ -71,7 +71,7 @@ class GroupsViewController: UIViewController {
     
     @objc func buttonAction(sender:UIButton!)
     {
-        CurrentSessionData.CurrentGroup = sender.titleLabel!.text!
+        CurrentGroupData.CurrentGroup = sender.titleLabel!.text!
         performSegue(withIdentifier: "selected-group", sender: self)
     }
 

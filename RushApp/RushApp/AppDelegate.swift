@@ -65,16 +65,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     // firebase.google.com/docs/database/ios/read-and-write
                     print("user found")
                     let value = snapshot.value as? [String: AnyObject]
-                    CurrentSessionData.CurrentUser = User(dict: value!)
+                    CurrentUserData.CurrentUser = User(dict: value!)
                     
                     // used to print JSON data
-                    dump(CurrentSessionData.CurrentUser)
+                    dump(CurrentUserData.CurrentUser)
                 } else {
                     // firebase.google.com/docs/database/ios/read-and-write
                     print("user not found")
                     let trialUser = User(userID: loginUserId!, firstName: "Brian", lastName: "Li", school: "Duke")
-                    CurrentSessionData.CurrentUser = trialUser
-                    self.ref.child("allUsers").child("GID").child(loginUserId!).setValue(CurrentSessionData.CurrentUser.toDictionary())
+                    CurrentUserData.CurrentUser = trialUser
+                    self.ref.child("allUsers").child("GID").child(loginUserId!).setValue(CurrentUserData.CurrentUser.toDictionary())
                 }
                 
             })

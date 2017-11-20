@@ -27,8 +27,9 @@ class NewUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateDisplay() {
-        
+    func updateDisplay(labelText: String) {
+        fieldLabel.text = labelText
+        textField = nil
     }
     
     @IBAction func nextClicked(_ sender: Any) {
