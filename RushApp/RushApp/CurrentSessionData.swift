@@ -12,7 +12,6 @@ struct CurrentUserData {
 
 struct CurrentGroupData {
     static var CurrentGroup: String = String()
-    static var SelectedMember: User = User()
     static var GroupMembers: [User] = [User]()
 }
 
