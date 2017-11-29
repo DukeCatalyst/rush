@@ -13,15 +13,15 @@ class GroupsViewController: UIViewController {
         super.viewDidLoad()
         
 //        Fake data for now
-        let trialUser = User(userID: "test", firstName: "Brian", lastName: "Li", school: "Duke")
-        CurrentGroupData.GroupMembers.append(trialUser)
+        let trialUser = User(userID: "test", firstName: "Brian", lastName: "Li", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
         CurrentUserData.CurrentUser = trialUser
+        CurrentGroupData.GroupMembers.append(trialUser)
         
-        var moreFakeUsers = User(userID: "test", firstName: "Brian", lastName: "Jordan", school: "Duke")
+        var moreFakeUsers = User(userID: "test", firstName: "Brian", lastName: "Jordan", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
         CurrentGroupData.GroupMembers.append(moreFakeUsers)
-        moreFakeUsers = User(userID: "test", firstName: "Simran", lastName: "Singh", school: "Duke")
+        moreFakeUsers = User(userID: "test", firstName: "Simran", lastName: "Singh", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
         CurrentGroupData.GroupMembers.append(moreFakeUsers)
-        moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke")
+        moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
         CurrentGroupData.GroupMembers.append(moreFakeUsers)
         
         print(CurrentGroupData.GroupMembers)
