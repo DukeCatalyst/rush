@@ -72,7 +72,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 } else {
                     // firebase.google.com/docs/database/ios/read-and-write
                     print("user not found")
-                    let trialUser = User(userID: loginUserId!, firstName: "Brian", lastName: "Li", school: "Duke")
+                    let trialUser = User(userID: loginUserId!, firstName: "Brian", lastName: "Li", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
+                    CurrentUserData.CurrentUser = trialUser
                     CurrentUserData.CurrentUser = trialUser
                     self.ref.child("allUsers").child("GID").child(loginUserId!).setValue(CurrentUserData.CurrentUser.toDictionary())
                 }

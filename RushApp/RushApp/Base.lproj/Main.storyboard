@@ -442,7 +442,7 @@
                         <outlet property="image" destination="EsL-mc-Bbn" id="yXO-iM-QDj"/>
                         <outlet property="name" destination="sxA-VK-Uh2" id="QmU-lm-rEJ"/>
                         <outlet property="otherInterests" destination="LfM-t8-UD2" id="XUc-vO-YHI"/>
-                        <outlet property="techInterests" destination="Zd4-YF-z87" id="kBs-8l-ubb"/>
+                        <outlet property="techInterests" destination="QVb-AN-Ns3" id="CdO-hO-Tvc"/>
                         <outlet property="year" destination="7oe-4X-iqb" id="Bw6-6L-d8S"/>
                     </connections>
                 </viewController>

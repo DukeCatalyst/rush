@@ -25,7 +25,11 @@ class MembersViewController: UIViewController {
         super.viewDidLoad()
         image.image = UIImage(named: "test.jpg")
         name.text = myUser.firstName + " " + myUser.lastName
-        
+        birthday.text = myUser.birthday
+        year.text = myUser.year
+        techInterests.text = myUser.techInterests
+        otherInterests.text = myUser.otherInterests
+        contact.text = myUser.contact
         // Do any additional setup after loading the view.
     }
 
