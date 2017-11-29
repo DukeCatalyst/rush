@@ -24,7 +24,6 @@ class GroupsViewController: UIViewController {
         moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
         CurrentGroupData.GroupMembers.append(moreFakeUsers)
         
-        print(CurrentGroupData.GroupMembers)
         
         var button : UIButton
         let rushGroups = CurrentUserData.CurrentUser.rushGroups!
