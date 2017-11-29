@@ -14,6 +14,7 @@ class MembersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 100.0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,9 +23,9 @@ class MembersTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MembersTableViewCell
-        cell.UserName.text = users[indexPath.row].firstName
-        cell.UserStatus.text = "member"
-        cell.UserImage.image = UIImage(named: "test.jpg")
+        cell.userName.text = users[indexPath.row].firstName
+        cell.userStatus.text = "member"
+        cell.userImage.image = UIImage(named: "test.jpg")
         return cell
     }
     

@@ -11,9 +11,9 @@ import UIKit
 class MembersTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var UserName: UILabel!
-    @IBOutlet weak var UserStatus: UILabel!
-    @IBOutlet weak var UserImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userStatus: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,8 +21,6 @@ class MembersTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

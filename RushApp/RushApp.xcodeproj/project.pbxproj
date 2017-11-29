@@ -12,6 +12,7 @@
 		B177FCD41FC398DF00D2F576 /* MembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B177FCD31FC398DF00D2F576 /* MembersTableViewCell.swift */; };
 		B177FCD61FC39E0200D2F576 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B177FCD51FC39E0200D2F576 /* test.jpg */; };
 		B1BFAC331FB8C50F003B542D /* MembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BFAC321FB8C50F003B542D /* MembersTableViewController.swift */; };
+		B1E026331FCF09B500DEC49E /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E026321FCF09B500DEC49E /* MembersViewController.swift */; };
 		C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E51F882D28007D7989 /* AppDelegate.swift */; };
 		C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72303E71F882D28007D7989 /* SignInViewController.swift */; };
 		C72303EB1F882D28007D7989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72303E91F882D28007D7989 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		B177FCD31FC398DF00D2F576 /* MembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewCell.swift; sourceTree = "<group>"; };
 		B177FCD51FC39E0200D2F576 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test.jpg; path = ../../../../Desktop/Random/test.jpg; sourceTree = "<group>"; };
 		B1BFAC321FB8C50F003B542D /* MembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
+		B1E026321FCF09B500DEC49E /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		C72303E21F882D28007D7989 /* RushApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RushApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72303E51F882D28007D7989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72303E71F882D28007D7989 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				FD14C3DE1FBF9A7400D1EA28 /* NewUserViewController.swift */,
 				B1BFAC321FB8C50F003B542D /* MembersTableViewController.swift */,
 				B177FCD31FC398DF00D2F576 /* MembersTableViewCell.swift */,
+				B1E026321FCF09B500DEC49E /* MembersViewController.swift */,
 				C72303E91F882D28007D7989 /* Main.storyboard */,
 				B177FCD51FC39E0200D2F576 /* test.jpg */,
 				C72303EF1F882D28007D7989 /* Assets.xcassets */,
@@ -501,6 +504,7 @@
 			files = (
 				C72F2F731FB3BE5D00CAC47E /* User.swift in Sources */,
 				C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */,
+				B1E026331FCF09B500DEC49E /* MembersViewController.swift in Sources */,
 				B1BFAC331FB8C50F003B542D /* MembersTableViewController.swift in Sources */,
 				B177FCD41FC398DF00D2F576 /* MembersTableViewCell.swift in Sources */,
 				FD14C3DD1FBF993500D1EA28 /* GroupsViewController.swift in Sources */,
