@@ -1,21 +1,15 @@
 //
-//  NewUserViewController.swift
+//  CalendarViewController.swift
 //  RushApp
 //
-//  Created by Brian Jordan on 11/17/17.
+//  Created by Brian Jordan on 11/29/17.
 //  Copyright © 2017 rush. All rights reserved.
 //
 
 import UIKit
 
-class NewUserViewController: UIViewController {
+class CalendarViewController: UIViewController {
 
-    let requiredFields = ["School", "First Name", "Last Name"]
-    var index = 0
-    
-    @IBOutlet weak var fieldLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,19 +21,7 @@ class NewUserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateDisplay(labelText: String) {
-        fieldLabel.text = labelText
-        textField = nil
-    }
-    
-    @IBAction func nextClicked(_ sender: Any) {
-        if(textField.text != nil) {
-            
-        } else {
-            
-        }
-    }
-    
+
     /*
     // MARK: - Navigation
 

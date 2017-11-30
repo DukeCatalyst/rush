@@ -13,17 +13,18 @@ class GroupsViewController: UIViewController {
         super.viewDidLoad()
         
 //        Fake data for now
-        let trialUser = User(userID: "test", firstName: "Brian", lastName: "Li", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
-        CurrentUserData.CurrentUser = trialUser
+        let trialUser = User(userID: "test", firstName: "Brian", lastName: "Li", school: "Duke")
         CurrentGroupData.GroupMembers.append(trialUser)
+        CurrentUserData.CurrentUser = trialUser
         
-        var moreFakeUsers = User(userID: "test", firstName: "Brian", lastName: "Jordan", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
+        var moreFakeUsers = User(userID: "test", firstName: "Brian", lastName: "Jordan", school: "Duke")
         CurrentGroupData.GroupMembers.append(moreFakeUsers)
-        moreFakeUsers = User(userID: "test", firstName: "Simran", lastName: "Singh", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
+        moreFakeUsers = User(userID: "test", firstName: "Simran", lastName: "Singh", school: "Duke")
         CurrentGroupData.GroupMembers.append(moreFakeUsers)
-        moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
+        moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke")
         CurrentGroupData.GroupMembers.append(moreFakeUsers)
         
+        print(CurrentGroupData.GroupMembers)
         
         var button : UIButton
         let rushGroups = CurrentUserData.CurrentUser.rushGroups!

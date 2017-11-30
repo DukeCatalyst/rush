@@ -1,0 +1,68 @@
+//
+//  NewUserViewController.swift
+//  RushApp
+//
+//  Created by Brian Jordan on 11/17/17.
+//  Copyright © 2017 rush. All rights reserved.
+//
+
+import UIKit
+import FirebaseDatabase
+
+class NewUserViewController: UIViewController {
+
+    var ref: DatabaseReference!
+    
+    let requiredFields = ["School", "First Name", "Last Name"]
+    var index = 0
+    
+    @IBOutlet weak var fieldLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
+        
+        self.ref.child("schools").child("allSchools").observe(DataEventType.value, with: { (snapshot) in
+            if snapshot.exists() {
+            } else {
+
+
+                self.ref.child("schools").child("allSchools").setValue(["Duke University", "Princeton University"])
+            }
+            
+        })
+        //aRef.setValue(["Duke University", "Princeton University", "Massachusetts Institute of Technology"])
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func updateDisplay(labelText: String) {
+        fieldLabel.text = labelText
+        textField = nil
+    }
+    
+    @IBAction func nextClicked(_ sender: Any) {
+        if(textField.text != nil) {
+            
+        } else {
+            
+        }
+    }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
