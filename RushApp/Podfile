@@ -12,6 +12,7 @@ target 'RushApp' do
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'GoogleSignIn'
+  pod 'GoogleAPIClientForREST'
 
   target 'RushAppTests' do
     inherit! :search_paths

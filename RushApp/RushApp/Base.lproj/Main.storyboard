@@ -619,7 +619,7 @@
         <!--rush.-->
         <scene sceneID="Tdj-wP-lFN">
             <objects>
-                <viewController id="gEB-6q-3H2" sceneMemberID="viewController">
+                <viewController id="gEB-6q-3H2" customClass="CalendarViewController" customModule="RushApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xzl-YT-tdQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
