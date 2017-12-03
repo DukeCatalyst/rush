@@ -17,6 +17,11 @@ struct CurrentGroupData {
 }
 
 struct CurrentSchoolData {
+    static var CurrentSchool: String!
     static var AllSchoolGroups: [String]!
+}
+
+struct GlobalData {
+    static var AllSchools: [String]!
 }
 

@@ -17,6 +17,7 @@ class User: NSObject {
     var birthday: String
     var techInterests: String
     var otherInterests: String
+    var email: String
     var contact: String
     var memberGroups: [String]!
     var rushGroups: [String]!
@@ -29,11 +30,12 @@ class User: NSObject {
         year = ""
         techInterests = ""
         otherInterests = ""
+        email = ""
         contact = ""
         birthday = ""
     }
     
-    init(userID: String, firstName: String, lastName: String, school: String, year: String, techInterests: String, contact: String, otherInterests: String, birthday: String) {
+    init(userID: String, firstName: String, lastName: String, school: String, year: String, techInterests: String, email: String, contact: String, otherInterests: String, birthday: String) {
         self.userID = userID
         self.firstName = firstName
         self.lastName = lastName
@@ -42,6 +44,7 @@ class User: NSObject {
         self.techInterests = techInterests
         self.otherInterests = otherInterests
         self.birthday = birthday
+        self.email = email
         self.contact = contact
         self.memberGroups = "Catalyst,ThetaRhoPhi".components(separatedBy: ",")
         self.rushGroups = "Catalyst,Frat,SigmaKappaLambda".components(separatedBy: ",")
@@ -57,12 +60,13 @@ class User: NSObject {
         self.techInterests = dict["techInterests"] as! String
         self.otherInterests = dict["otherInterests"] as! String
         self.birthday = dict["birthday"] as! String
+        self.email = dict["email"] as! String
         self.contact = dict["contact"] as! String
         self.memberGroups = "Catalyst,ThetaRhoPhi".components(separatedBy: ",")
         self.rushGroups = "Catalyst,Frat,SigmaKappaLambda".components(separatedBy: ",")
     }
     
     func toDictionary() -> [String: AnyObject] {
-        return ["userID": userID as AnyObject, "firstName": firstName as AnyObject, "lastName": lastName as AnyObject, "year": school as AnyObject, "techInterests": school as AnyObject, "otherInterests": school as AnyObject, "birthday": school as AnyObject, "contact": school as AnyObject]
+        return ["userID": userID as AnyObject, "firstName": firstName as AnyObject, "lastName": lastName as AnyObject, "year": school as AnyObject, "techInterests": school as AnyObject, "otherInterests": school as AnyObject, "birthday": school as AnyObject, "email": email as AnyObject, "contact": school as AnyObject]
     }
 }
