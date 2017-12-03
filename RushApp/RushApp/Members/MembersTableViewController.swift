@@ -10,14 +10,18 @@ import UIKit
 
 class MembersTableViewController: UITableViewController {
 
-    var users: [User] = CurrentGroupData.GroupMembers
+    var users: [User]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        users = CurrentGroupData.GroupMembers
+        print("did transition")
+        dump(CurrentGroupData.GroupMembers)
         self.tableView.rowHeight = 100.0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("did attempt with \(users.count)")
         return users.count
     }
 

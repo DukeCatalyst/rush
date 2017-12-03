@@ -14,11 +14,13 @@ struct CurrentGroupData {
     static var CurrentGroup: String = String()
     static var SelectedMember: User = User()
     static var GroupMembers: [User] = [User]()
+    static var GroupRushees: [User] = [User]()
 }
 
 struct CurrentSchoolData {
     static var CurrentSchool: String!
-    static var AllSchoolGroups: [String]!
+    static var AllSchoolGroups: [String: Group] = [:]
+    static var AllSchoolGroupNames: [String] = []
 }
 
 struct GlobalData {

@@ -26,7 +26,7 @@ class MembersViewController: UIViewController {
         image.image = UIImage(named: "test.jpg")
         name.text = myUser.firstName + " " + myUser.lastName
         birthday.text = myUser.birthday
-        year.text = myUser.year
+        year.text = "\(myUser.year)"
         techInterests.text = myUser.techInterests
         otherInterests.text = myUser.otherInterests
         contact.text = myUser.contact

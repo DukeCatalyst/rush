@@ -15,13 +15,15 @@ import FirebaseDatabase
 class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
     var ref: DatabaseReference!
+    var firebaseClient: FirebaseClient!
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var signInButton: GIDSignInButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Use Firebase library to configure APIs
-        FirebaseApp.configure()
-        ref = Database.database().reference()
         
         GIDSignIn.sharedInstance().signOut()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
@@ -29,12 +31,16 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
         
-        // ref = Database.database().reference()
+        ref = Database.database().reference()
+        firebaseClient = FirebaseClient.init()
         
         // TODO(developer) Configure the sign-in button look/feel
         // ...
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.stopAnimating()
+        
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,15 +53,24 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
             return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
     }
     
+    func loadingUI() {
+        activityIndicator.startAnimating()
+        signInButton.isHidden = true
+    }
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         
         // ...
         if let error = error { return }
         
+        self.loadingUI()
+        
         let loginUserId = user.userID
         let loginGivenName = user.profile.givenName
         let loginFamilyName = user.profile.familyName
         let loginEmail = user.profile.email
+        
+        print(loginUserId)
         
         CurrentUserData.CurrentUser = User()
         CurrentUserData.CurrentUser.firstName = loginGivenName!
@@ -78,18 +93,21 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
             self.ref.child("allUsers").child("GID").child(loginUserId!).observe(DataEventType.value, with: { (snapshot) in
                 if snapshot.exists() {
                     // firebase.google.com/docs/database/ios/read-and-write
-                    print("user found")
                     let value = snapshot.value as? [String: AnyObject]
                     CurrentUserData.CurrentUser = User(dict: value!)
+                    CurrentSchoolData.CurrentSchool = CurrentUserData.CurrentUser.school
+                    
+                    self.firebaseClient.getAllSchoolGroups() { (result, error) in
+                        if result {
+                        }
+                    }
+                    
+                    self.performSegue(withIdentifier: "userFound", sender: nil)
+                    
                 } else {
-                    // firebase.google.com/docs/database/ios/read-and-write
-                    print("user not found")
-                    
-                    
                     // pull data on all school names and store
                     self.ref.child("schools").child("allSchools").observe(DataEventType.value, with: { (allSchoolsSnapshot) in
                         GlobalData.AllSchools = allSchoolsSnapshot.value as! [String]
-                        dump(GlobalData.AllSchools)
                         self.performSegue(withIdentifier: "createNewUser", sender: nil)
                     })
                     

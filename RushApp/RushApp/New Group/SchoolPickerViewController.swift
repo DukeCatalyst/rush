@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import CoreData
+import Firebase
+import GoogleSignIn
+import FirebaseDatabase
 
 class SchoolPickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -15,7 +19,7 @@ class SchoolPickerViewController: UIViewController, UIPickerViewDelegate, UIPick
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // Use Firebase library to configure APIs
         
     }
     
@@ -38,7 +42,17 @@ class SchoolPickerViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func nextClicked(_ sender: Any) {
-                CurrentSchoolData.CurrentSchool = GlobalData.AllSchools[schoolPickerView.selectedRow(inComponent: 0)]
+        // store the school name that was selected
+        CurrentSchoolData.CurrentSchool = GlobalData.AllSchools[schoolPickerView.selectedRow(inComponent: 0)]
+        CurrentUserData.CurrentUser.school = GlobalData.AllSchools[schoolPickerView.selectedRow(inComponent: 0)]
+        // extract data about all groups associated with the school
+        let firebaseClient = FirebaseClient.init()
+        
+        firebaseClient.getAllSchoolGroups() { (result, error) in
+            if result {
+                
+            }
+        }
     }
 }
 

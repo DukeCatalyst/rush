@@ -9,6 +9,8 @@ import UIKit
 
 class GroupsViewController: UIViewController {
 
+    var firebaseClient: FirebaseClient!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +26,13 @@ class GroupsViewController: UIViewController {
         //moreFakeUsers = User(userID: "test", firstName: "Nikki", lastName: "Hevizi", school: "Duke",  year: "String", techInterests: "String", contact: "String", otherInterests: "String", birthday: "String")
         //CurrentGroupData.GroupMembers.append(moreFakeUsers)
         
+        firebaseClient = FirebaseClient.init()
         
+        updateUI()
+        
+    }
+    
+    func updateUI() {
         var button : UIButton
         let rushGroups = CurrentUserData.CurrentUser.rushGroups!
         let memberGroups = CurrentUserData.CurrentUser.memberGroups!
@@ -71,23 +79,17 @@ class GroupsViewController: UIViewController {
     @objc func buttonAction(sender:UIButton!)
     {
         CurrentGroupData.CurrentGroup = sender.titleLabel!.text!
-        performSegue(withIdentifier: "selected-group", sender: self)
+        firebaseClient.getAllCurrentGroupData() { (result, error) in
+            if result {
+                self.performSegue(withIdentifier: "selected-group", sender: self)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -13,7 +13,7 @@ class User: NSObject {
     var firstName: String
     var lastName: String
     var school: String
-    var year: String
+    var year: Int
     var birthday: String
     var techInterests: String
     var otherInterests: String
@@ -27,7 +27,7 @@ class User: NSObject {
         firstName = ""
         lastName = ""
         school = ""
-        year = ""
+        year = Int()
         techInterests = ""
         otherInterests = ""
         email = ""
@@ -35,7 +35,7 @@ class User: NSObject {
         birthday = ""
     }
     
-    init(userID: String, firstName: String, lastName: String, school: String, year: String, techInterests: String, email: String, contact: String, otherInterests: String, birthday: String) {
+    init(userID: String, firstName: String, lastName: String, school: String, year: Int, techInterests: String, email: String, contact: String, otherInterests: String, birthday: String) {
         self.userID = userID
         self.firstName = firstName
         self.lastName = lastName
@@ -56,14 +56,14 @@ class User: NSObject {
         self.lastName = dict["lastName"] as! String
         self.school = dict["school"] as! String
         self.userID = dict["userID"] as! String
-        self.year = dict["tear"] as! String
+        self.year = dict["year"] as! Int
         self.techInterests = dict["techInterests"] as! String
         self.otherInterests = dict["otherInterests"] as! String
         self.birthday = dict["birthday"] as! String
         self.email = dict["email"] as! String
         self.contact = dict["contact"] as! String
-        self.memberGroups = "Catalyst,ThetaRhoPhi".components(separatedBy: ",")
-        self.rushGroups = "Catalyst,Frat,SigmaKappaLambda".components(separatedBy: ",")
+        self.memberGroups = dict["memberGroups"] as! [String]
+        self.rushGroups = dict["rushGroups"] as! [String]
     }
     
     func toDictionary() -> [String: AnyObject] {
