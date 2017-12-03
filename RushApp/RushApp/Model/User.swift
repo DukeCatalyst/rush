@@ -33,6 +33,8 @@ class User: NSObject {
         email = ""
         contact = ""
         birthday = ""
+        memberGroups = []
+        rushGroups = []
     }
     
     init(userID: String, firstName: String, lastName: String, school: String, year: Int, techInterests: String, email: String, contact: String, otherInterests: String, birthday: String) {

@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="3737" y="2059"/>
         </scene>
-        <!--View Controller-->
+        <!--Member View Controller-->
         <scene sceneID="QGu-Dv-JMh">
             <objects>
-                <viewController id="LVa-Kf-WOH" sceneMemberID="viewController">
+                <viewController id="LVa-Kf-WOH" customClass="NUMemberViewController" customModule="RushApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bXW-2h-znZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
                                     <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="adw-cE-1bU" kind="custom" id="9M9-oY-5zq"/>
+                                    <segue destination="adw-cE-1bU" kind="show" id="i61-v6-dhI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z3-RB-VGF">
@@ -217,61 +217,19 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-mM-A1u">
-                                <rect key="frame" x="0.0" y="192" width="375" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="club name">
-                                        <attributes>
-                                            <color key="NSColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="AvenirNext-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKh-os-Wa7">
-                                <rect key="frame" x="0.0" y="222" width="375" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="club name">
-                                        <attributes>
-                                            <color key="NSColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="AvenirNext-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8h-4Y-ryG">
-                                <rect key="frame" x="137" y="315" width="101" height="36"/>
+                                <rect key="frame" x="136" y="458" width="101" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="add another">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SAg-ir-vWZ" kind="custom" id="Vxg-CM-xLo"/>
+                                    <segue destination="SAg-ir-vWZ" kind="show" id="Giy-oP-dUL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-th-VGF">
-                                <rect key="frame" x="0.0" y="255" width="375" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="club name">
-                                        <attributes>
-                                            <color key="NSColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="AvenirNext-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQs-f4-ohN">
-                                <rect key="frame" x="115" y="359" width="146" height="36"/>
+                                <rect key="frame" x="114" y="502" width="146" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="add admin access">
@@ -281,19 +239,42 @@
                                     <segue destination="v5u-IN-M5M" kind="custom" id="SAN-VA-x0r"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-Yw-QRY">
+                                <rect key="frame" x="-1" y="252" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="LVa-Kf-WOH" id="uEc-gI-7ki"/>
+                                    <outlet property="delegate" destination="LVa-Kf-WOH" id="KZs-Yk-jfJ"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-hX-k0z">
+                                <rect key="frame" x="16" y="20" width="46" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kuG-ci-zch" kind="show" id="1k7-gh-9Cm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.10980392160000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="jdc-E8-FR9"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="wZ8-Yw-QRY" id="y1R-8C-CRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8T-KR-bMF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5166" y="1253"/>
+            <point key="canvasLocation" x="5213.6000000000004" y="2058.6206896551726"/>
         </scene>
-        <!--View Controller-->
+        <!--Rushee View Controller-->
         <scene sceneID="gGt-hY-mxv">
             <objects>
-                <viewController id="adw-cE-1bU" sceneMemberID="viewController">
+                <viewController id="adw-cE-1bU" customClass="NURusheeViewController" customModule="RushApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M6b-5O-MpO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,73 +300,57 @@
                                 <state key="normal" title="next">
                                     <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Udv-Ws-hci" kind="show" id="kVS-wP-dJK"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fU-YY-RTu">
-                                <rect key="frame" x="0.0" y="188" width="375" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="club name">
-                                        <attributes>
-                                            <color key="NSColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="AvenirNext-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeO-OF-bCC">
-                                <rect key="frame" x="0.0" y="218" width="375" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="club name">
-                                        <attributes>
-                                            <color key="NSColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="AvenirNext-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tda-5q-2hk">
-                                <rect key="frame" x="0.0" y="251" width="375" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="club name">
-                                        <attributes>
-                                            <color key="NSColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="17" name="AvenirNext-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1I-KX-IZb">
-                                <rect key="frame" x="137" y="315" width="101" height="36"/>
+                                <rect key="frame" x="137" y="458" width="101" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="add another">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uLg-ea-qBa" kind="custom" id="dZb-4O-Qac"/>
+                                    <segue destination="uLg-ea-qBa" kind="show" id="dP5-Er-Zim"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5J-1V-2hv">
+                                <rect key="frame" x="0.0" y="252" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="adw-cE-1bU" id="kB1-6z-FEI"/>
+                                    <outlet property="delegate" destination="adw-cE-1bU" id="IiA-SW-720"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Neb-ZQ-1Nh">
+                                <rect key="frame" x="16" y="20" width="46" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LVa-Kf-WOH" kind="show" id="xe2-VH-DeL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.10980392160000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="IAz-uP-IvA"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="y5J-1V-2hv" id="Rqk-3g-nbL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1u-Aw-Vjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6318" y="1216"/>
+            <point key="canvasLocation" x="5980" y="2059"/>
         </scene>
-        <!--View Controller-->
+        <!--Interests View Controller-->
         <scene sceneID="lkJ-UQ-3sG">
             <objects>
-                <viewController id="kuG-ci-zch" sceneMemberID="viewController">
+                <viewController id="kuG-ci-zch" customClass="InterestsViewController" customModule="RushApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zlr-Dd-sMK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,6 +418,10 @@
                                 <state key="normal" title="next">
                                     <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextClicked:" destination="kuG-ci-zch" eventType="touchUpInside" id="EdG-xI-YAD"/>
+                                    <segue destination="LVa-Kf-WOH" kind="show" id="jXm-Cx-viX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYZ-yY-ytY">
                                 <rect key="frame" x="16" y="20" width="46" height="33"/>
@@ -461,11 +430,18 @@
                                 <state key="normal" title="back">
                                     <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Cxy-jf-oEy" kind="show" id="7Le-eb-1L2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.10980392160000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Q3X-ib-uiz"/>
                     </view>
+                    <connections>
+                        <outlet property="academicInterestsTextField" destination="eTp-a7-JWu" id="Pb2-Bb-jLS"/>
+                        <outlet property="otherInterestsTextField" destination="35r-K7-FUo" id="WBN-Fl-LpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BW-JW-Tjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -540,12 +516,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urw-0a-M1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5876" y="2059"/>
+            <point key="canvasLocation" x="5980" y="3516"/>
         </scene>
-        <!--View Controller-->
+        <!--Organization Member Picker View Controller-->
         <scene sceneID="bzZ-K1-dKK">
             <objects>
-                <viewController id="SAg-ir-vWZ" sceneMemberID="viewController">
+                <viewController id="SAg-ir-vWZ" customClass="OrganizationMemberPickerViewController" customModule="RushApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LeX-p6-hvE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -568,15 +544,45 @@
                                 <rect key="frame" x="0.0" y="211" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SAg-ir-vWZ" id="cAs-4a-pCb"/>
+                                    <outlet property="delegate" destination="SAg-ir-vWZ" id="wDj-mP-pzG"/>
+                                </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np3-u1-EBg">
+                                <rect key="frame" x="301" y="20" width="58" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="select">
+                                    <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectClicked:" destination="SAg-ir-vWZ" eventType="touchUpInside" id="zFf-Xs-cIl"/>
+                                    <segue destination="LVa-Kf-WOH" kind="show" id="bt9-UV-6AR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOJ-xM-56g">
+                                <rect key="frame" x="16" y="20" width="63" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LVa-Kf-WOH" kind="show" id="Sn8-MH-8rh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.10980392160000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="AM5-XK-kGR"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="MQ8-2W-tpZ" id="p2S-ql-bhz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plc-A5-e2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5122" y="2059"/>
+            <point key="canvasLocation" x="5213.6000000000004" y="2824.1379310344828"/>
         </scene>
         <!--Groups View Controller-->
         <scene sceneID="5tS-hE-g0W">
@@ -683,9 +689,6 @@
                                     <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <connections>
-                                <segue destination="LVa-Kf-WOH" kind="custom" id="onX-m5-YPe"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -822,10 +825,10 @@
             </objects>
             <point key="canvasLocation" x="2948" y="1341"/>
         </scene>
-        <!--View Controller-->
+        <!--Organization Rushee View Controller-->
         <scene sceneID="d4K-hO-xTI">
             <objects>
-                <viewController id="uLg-ea-qBa" sceneMemberID="viewController">
+                <viewController id="uLg-ea-qBa" customClass="OrganizationRusheeViewController" customModule="RushApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7pi-qc-d6h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -834,6 +837,10 @@
                                 <rect key="frame" x="0.0" y="211" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uLg-ea-qBa" id="wMp-sl-w6O"/>
+                                    <outlet property="delegate" destination="uLg-ea-qBa" id="9HF-cM-tSQ"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXe-wg-Eea">
                                 <rect key="frame" x="0.0" y="98" width="375" height="105"/>
@@ -849,14 +856,40 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5i-ot-9PX">
+                                <rect key="frame" x="16" y="20" width="63" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="cancel">
+                                    <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="adw-cE-1bU" kind="show" id="13e-Ma-KuZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPj-pp-2hB">
+                                <rect key="frame" x="301" y="20" width="58" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="select">
+                                    <color key="titleColor" red="0.02809814364" green="0.7050845027" blue="0.81459861990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectClicked:" destination="uLg-ea-qBa" eventType="touchUpInside" id="e9z-8A-x83"/>
+                                    <segue destination="adw-cE-1bU" kind="show" id="lHq-dd-H2Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.10980392160000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="qEG-Yf-XJT"/>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="QQk-K8-ghW" id="7Df-J4-lXz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVV-e7-BNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6548" y="2059"/>
+            <point key="canvasLocation" x="5980" y="2824"/>
         </scene>
         <!--Members-->
         <scene sceneID="EmZ-NT-Om2">
@@ -1080,5 +1113,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="e9w-wm-YPu"/>
+        <segue reference="kVS-wP-dJK"/>
+        <segue reference="1k7-gh-9Cm"/>
+        <segue reference="i61-v6-dhI"/>
+        <segue reference="xe2-VH-DeL"/>
+        <segue reference="WrR-XJ-TUJ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -23,10 +23,15 @@
 		C72F2F731FB3BE5D00CAC47E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F2F721FB3BE5D00CAC47E /* User.swift */; };
 		C72F2F751FB3D4E000CAC47E /* CurrentSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */; };
 		C73C71081FD3C09F0046A2F2 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C71071FD3C09F0046A2F2 /* FirebaseClient.swift */; };
+		C73C710A1FD3EED30046A2F2 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C71091FD3EED30046A2F2 /* InterestsViewController.swift */; };
 		C7A185821FD368E000A9C5B3 /* SchoolPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A185811FD368E000A9C5B3 /* SchoolPickerViewController.swift */; };
 		C7A185841FD36FFC00A9C5B3 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A185831FD36FFC00A9C5B3 /* NewUserViewController.swift */; };
 		C7A185861FD37C4E00A9C5B3 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A185851FD37C4E00A9C5B3 /* Group.swift */; };
 		C7AFE7C61FA29F9E006663A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7AFE7C51FA29F9E006663A7 /* GoogleService-Info.plist */; };
+		C7D66BE31FD4022F00842C44 /* NUMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D66BE21FD4022F00842C44 /* NUMemberViewController.swift */; };
+		C7D66BE51FD464F000842C44 /* OrganizationMemberPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D66BE41FD464F000842C44 /* OrganizationMemberPickerViewController.swift */; };
+		C7D66BE71FD468EE00842C44 /* OrganizationRusheeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D66BE61FD468EE00842C44 /* OrganizationRusheeViewController.swift */; };
+		C7D66BE91FD46A9400842C44 /* NURusheeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D66BE81FD46A9400842C44 /* NURusheeViewController.swift */; };
 		EAB515B8D0CBB101F5AA3F05 /* Pods_RushAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F36E91897D4E95FB9E8092C /* Pods_RushAppTests.framework */; };
 		FD14C3DD1FBF993500D1EA28 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14C3DC1FBF993500D1EA28 /* GroupsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -75,10 +80,15 @@
 		C72F2F721FB3BE5D00CAC47E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C72F2F741FB3D4E000CAC47E /* CurrentSessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentSessionData.swift; sourceTree = "<group>"; };
 		C73C71071FD3C09F0046A2F2 /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
+		C73C71091FD3EED30046A2F2 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		C7A185811FD368E000A9C5B3 /* SchoolPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolPickerViewController.swift; sourceTree = "<group>"; };
 		C7A185831FD36FFC00A9C5B3 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		C7A185851FD37C4E00A9C5B3 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		C7AFE7C51FA29F9E006663A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C7D66BE21FD4022F00842C44 /* NUMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NUMemberViewController.swift; sourceTree = "<group>"; };
+		C7D66BE41FD464F000842C44 /* OrganizationMemberPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationMemberPickerViewController.swift; sourceTree = "<group>"; };
+		C7D66BE61FD468EE00842C44 /* OrganizationRusheeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationRusheeViewController.swift; sourceTree = "<group>"; };
+		C7D66BE81FD46A9400842C44 /* NURusheeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NURusheeViewController.swift; sourceTree = "<group>"; };
 		C8CA1C5D2B3FED458FF80C1D /* Pods_RushAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RushAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD85758A3CCE1EA9D73B16E1 /* Pods-RushAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppTests/Pods-RushAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		F4C6D68576C454C60939CD36 /* Pods-RushAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RushAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RushAppUITests/Pods-RushAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +211,11 @@
 			children = (
 				C7A185811FD368E000A9C5B3 /* SchoolPickerViewController.swift */,
 				C7A185831FD36FFC00A9C5B3 /* NewUserViewController.swift */,
+				C73C71091FD3EED30046A2F2 /* InterestsViewController.swift */,
+				C7D66BE21FD4022F00842C44 /* NUMemberViewController.swift */,
+				C7D66BE41FD464F000842C44 /* OrganizationMemberPickerViewController.swift */,
+				C7D66BE81FD46A9400842C44 /* NURusheeViewController.swift */,
+				C7D66BE61FD468EE00842C44 /* OrganizationRusheeViewController.swift */,
 			);
 			name = "New Users";
 			path = "New Group";
@@ -533,11 +548,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C72F2F731FB3BE5D00CAC47E /* User.swift in Sources */,
+				C7D66BE91FD46A9400842C44 /* NURusheeViewController.swift in Sources */,
+				C7D66BE71FD468EE00842C44 /* OrganizationRusheeViewController.swift in Sources */,
+				C7D66BE51FD464F000842C44 /* OrganizationMemberPickerViewController.swift in Sources */,
 				C72303E81F882D28007D7989 /* SignInViewController.swift in Sources */,
 				B1A8A6741FCF6C96000E7A4D /* MembersViewController.swift in Sources */,
 				C7A185861FD37C4E00A9C5B3 /* Group.swift in Sources */,
 				B1BFAC331FB8C50F003B542D /* MembersTableViewController.swift in Sources */,
 				B1A8A6721FCF6C8A000E7A4D /* MembersTableViewCell.swift in Sources */,
+				C73C710A1FD3EED30046A2F2 /* InterestsViewController.swift in Sources */,
+				C7D66BE31FD4022F00842C44 /* NUMemberViewController.swift in Sources */,
 				FD14C3DD1FBF993500D1EA28 /* GroupsViewController.swift in Sources */,
 				C72303E61F882D28007D7989 /* AppDelegate.swift in Sources */,
 				C72F2F751FB3D4E000CAC47E /* CurrentSessionData.swift in Sources */,
